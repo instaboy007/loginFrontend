@@ -1,0 +1,30 @@
+.container-fluid{
+    margin: 0;
+    padding: 0 !important;
+    display:block;
+}
+
+body {background: black;}
+canvas {z-index: -1;}
+
+/* CARD */
+.custom-card{
+    background-color: rgb(40, 40, 40) !important;
+}
+
+.label-text, .custom-card-header{
+    color: #D1B000 ;
+}
+
+.custom-button{
+    color: #D1B000 !important;
+    background-color: transparent !important;
+    background-image: none !important;
+    border-color: #D1B000 !important;
+}
+
+.custom-button:hover {
+    color: black !important;
+    background-color: #D1B000 !important;
+    border-color: black !important;
+}
