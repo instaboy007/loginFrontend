@@ -4,7 +4,7 @@
 
 py -m venv .venv
 .venv\scripts\activate
-pip install flask
+pip install -r requirements.txt
 
 # Run Code
 flask run --debug
