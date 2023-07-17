@@ -10,10 +10,10 @@
 </head>
 <body>
     
-    <div class="container-fluid" style="position: relative;">
+    <div class="container-fluid" style="position: relative;height: 100vh;">
         <div style="
         position: absolute;
-        width: 100%;">{% block content %}{% endblock %}</div>
+        width: 100%; top: 50%; left:50%; transform: translate(-50%, -50%);">{% block content %}{% endblock %}</div>
         <canvas id="c" style="position: absolute;"></canvas>
     </div>
     <script src="{{url_for('static', filename='js/scripts.js')}}"></script>

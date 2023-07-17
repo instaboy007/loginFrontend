@@ -2,6 +2,8 @@
     margin: 0;
     padding: 0 !important;
     display:block;
+    height: 100%;
+    width: 100%;
 }
 
 body {background: black;}
@@ -27,4 +29,18 @@ canvas {z-index: -1;}
     color: black !important;
     background-color: #D1B000 !important;
     border-color: black !important;
+}
+.notRegistered-text{
+    color: white;
+    font-size: 1rem;
+}
+.registerLink{
+    text-decoration: none;
+    color: #D1B000;
+    font-size: 1rem;
+}
+
+.registerLink :hover{
+    text-decoration:underline !important;
+    cursor: pointer !important;
 }
