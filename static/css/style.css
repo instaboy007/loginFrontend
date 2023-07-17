@@ -4,12 +4,20 @@
     display: block;
 }
 
-body {background: black;}
+body {
+    background: black;
+    /* overflow: hidden; */
+}
 canvas {z-index: -1;}
 
 /* CARD */
 .custom-card{
     background-color: rgb(40, 40, 40) !important;
+}
+
+.label-text{
+    margin-bottom: 0.2rem;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .label-text, .custom-card-header{

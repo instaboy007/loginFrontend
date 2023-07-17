@@ -6,6 +6,13 @@ var ctx = c.getContext("2d");
 c.height = window.innerHeight;
 c.width = window.innerWidth;
 
+// Listen for window resize events
+window.addEventListener('resize', () => {
+    // Update the height and width of the canvas
+    canvas.height = window.innerHeight;
+    canvas.width = window.innerWidth;
+  });
+
 //chinese characters - taken from the unicode charset
 var matrix = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ123456789@#$%^&*()*&^%+-/~{[|`]}";
 //converting the string into an array of single characters

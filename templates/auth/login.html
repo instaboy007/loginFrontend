@@ -7,25 +7,40 @@
                 <div class="card custom-card">
                     <div class="card-body">
                         <h2 class="custom-card-header text-center">Login</h2>
-                        <div class="form-group mb-3">
-                          <label class="label-text" for="email">Email</label>
-                          <input type="text" name="email" id="" class="form-control" placeholder="" aria-describedby="helpId">
-                          <small id="helpId" class="text-muted"></small>
-                        </div>
-                        <div class="form-group mb-3">
-                          <label class="label-text" for="password">Password</label>
-                          <input type="password" class="form-control" name="" id="" placeholder="">
-                        </div>
-                        <div class="d-grid mb-3">
-                            <button class="btn btn-outline-primary custom-button text-center" type="submit">
-                                Login
-                            </button>
-                        </div>
-                        <div class="notRegistered text-center">
-                            <span class="notRegistered-text text-center">
-                                Not Registered ? <a href="/register" class="registerLink">Register here</a>
-                            </span>
-                        </div>
+                        <form method=post>
+                            {{ csrf_token }}
+                            <div class="form-group mb-3">
+                                <label class="label-text" for="email">Email</label>
+                                <input type="text" name="email" value="{{form.email.data}}" id="email" class="form-control" placeholder="Email" aria-describedby="helpId">
+                                <small id="helpId" class="text-danger">
+                                    {% if form.email.errors %}
+                                        <ul class=errors>
+                                            {% for error in form.email.errors %}
+                                            <li>{{ error }}</li>
+                                            {% endfor %}
+                                        </ul>
+                                    {% endif %}
+                                </small>
+                              </div>
+                              <div class="form-group mb-3">
+                                <label class="label-text" for="password">Password</label>
+                                <input type="password" value="{{form.password.data}}"  class="form-control" name="password" id="password" placeholder="Password">
+                                <small id="helpId" class="text-danger">
+                                    {% if form.password.errors %}
+                                        <ul class=errors>
+                                            {% for error in form.password.errors %}
+                                            <li>{{ error }}</li>
+                                            {% endfor %}
+                                        </ul>
+                                    {% endif %}
+                                </small>
+                              </div>
+                              <div class="d-grid mb-3">
+                                  <button type="submit" class="btn btn-outline-primary custom-button text-center">
+                                      Login
+                                  </button>
+                              </div>
+                        </form>
                     </div>
                 </div>
             </div>
